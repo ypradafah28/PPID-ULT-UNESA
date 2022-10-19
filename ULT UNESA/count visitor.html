@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count visitor</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script async
+        src="https://api.countapi.xyz/get/siyapa.unesa.ac.id/2999cc96-859e-4e4f-818d-aede23f57e98?callback=websiteVisitsTotal">
+    </script>
+    <script async
+        src="https://api.countapi.xyz/set/siyapa.unesa.ac.id/2999cc96-859e-4e4f-818d-aede23f57e98?value=0?callback=websiteVisitsReset">
+    </script>
+</head>
+
+<body>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+            Statistik Pengunjung
+        </li>
+        <li class="list-group-item">
+            <span id="count" class="badge"></span>
+            Jumlah Pengunjung
+        </li>
+    </ul>
+    <script>
+        function websiteVisits(response) {
+            document.querySelector("#count").textContent = response.value
+        }
+    </script>
+    <script async
+        src="https://api.countapi.xyz/hit/siyapa.unesa.ac.id/2999cc96-859e-4e4f-818d-aede23f57e98?callback=websiteVisits">
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
