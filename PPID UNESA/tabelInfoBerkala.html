@@ -11,6 +11,8 @@
 <body>
 
     <section class="container">
+        <input style="width: 50%; border-radius: 15px; padding: 10px; margin: 10px 0px; font-size: 20px;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari Informasi">
+        <hr>
         <table id="myTable" class="table table-bordered">
             <thead>
                 <tr class="info">
@@ -231,11 +233,32 @@
                     <td>31</td>
 
                     <td colspan="2">Data Pelanggaran Pengawasan Internal Unesa</td>
-                    <td><a href="https://ppid.unesa.ac.id/page/data-pelanggaran-pengawasan-internal-unesa">Lihat</a></td>
+                    <td><a href="https://ppid.unesa.ac.id/page/data-pelanggaran-pengawasan-internal-unesa">Lihat</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </section>
+    <script>
+        function myFunction() {
+            var input, filter, tr, i, txtValue, tabel, td;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            tabel = document.getElementById("myTable")
+            tr = tabel.getElementsByTagName("tr")
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]
+                if (td) {
+                    txtValue = td.textContext || td.innerText
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = ""
+                    } else {
+                        tr[i].style.display = "none"
+                    }
+                }
+            }
+        }
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
