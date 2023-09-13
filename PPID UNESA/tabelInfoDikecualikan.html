@@ -19,45 +19,38 @@
             <thead>
                 <tr class="info">
                     <th></th>
+                    <th style="font-size: 30px;" colspan="2">Nama Informasi</th>
                     <th></th>
-                    <th colspan="2">Nama Informasi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>1</td>
-                    <td></td>
-                    <td>Nomor Telp Pimpinan</td>
+                    <td colspan="2">Nomor Telp Pimpinan</td>
                 </tr>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>2</td>
-                    <td></td>
-                    <td>Nomor Telp Tenaga Pendidik</td>
+                    <td colspan="2">Nomor Telp Tenaga Pendidik</td>
                 </tr>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>3</td>
-                    <td></td>
-                    <td>Nomor Telp Tenaga Kependidikan</td>
+                    <td colspan="2">Nomor Telp Tenaga Kependidikan</td>
                 </tr>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>4</td>
-                    <td></td>
-                    <td>Alamat Lengkap Pimpinan</td>
+                    <td colspan="2">Alamat Lengkap Pimpinan</td>
                 </tr>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>5</td>
-                    <td></td>
-                    <td>Alamat Lengkap Tenaga Pendidik</td>
+                    <td colspan="2">Alamat Lengkap Tenaga Pendidik</td>
                 </tr>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>6</td>
-                    <td></td>
-                    <td>Alamat Lengkap Tenaga Kependidikan</td>
+                    <td colspan="2">Alamat Lengkap Tenaga Kependidikan</td>
                 </tr>
-                <tr style="font-size:16px;">
+                <tr style="font-size:25px; font-weight:bolder;">
                     <td>7</td>
-                    <td></td>
-                    <td>Sengketa Lahan Unesa dan Citraland</td>
+                    <td colspan="2">Sengketa Lahan Unesa dan Citraland</td>
                 </tr>
             </tbody>
         </table>
@@ -70,7 +63,7 @@
             tabel = document.getElementById("myTable")
             tr = tabel.getElementsByTagName("tr")
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2]
+                td = tr[i].getElementsByTagName("td")[1]
                 if (td) {
                     txtValue = td.textContext || td.innerText
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
